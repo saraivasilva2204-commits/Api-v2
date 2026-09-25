@@ -16,7 +16,7 @@ fun cadastrar(usuario: Usuario): Usuario {
         return repository.findById(id).orElse(null)
     }
     fun excluir(id: Long) : Boolean {
-        if (repository.existsById(id)) {
+        if (!repository.existsById(id)) {
             return false
         }
         repository.deleteById(id)
