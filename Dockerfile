@@ -2,9 +2,9 @@ FROM gradle:8.10-jdk21 AS build
 
 WORKDIR /app
 
-COPY API-main .
+COPY . .
 
-RUN gradle build --no-daemon
+RUN ./gradlew build --no-daemon
 
 FROM eclipse-temurin:21-jre
 
