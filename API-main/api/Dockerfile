@@ -2,7 +2,7 @@ FROM gradle:8.10-jdk21 AS build
 
 WORKDIR /app
 
-COPY . .
+COPY .. .
 
 RUN chmod +x gradlew
 RUN ./gradlew build --no-daemon
